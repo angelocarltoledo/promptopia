@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 
 import PromptCard from "./PromptCard";
+import { revalidatePath } from "next/cache";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
