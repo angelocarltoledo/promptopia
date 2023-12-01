@@ -26,7 +26,7 @@ const Feed = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch("/api/prompt", { next: { revalidate: 1 } });
+      const response = await fetch("/api/prompt");
       const data = await response.json();
       setPosts(data);
     };
@@ -43,7 +43,7 @@ const Feed = () => {
           value={searchText}
           onChange={handleSearchChange}
           required
-          className="search_input peer"
+          className="search_input"
         />
       </form>
 
